@@ -1,0 +1,318 @@
+/* App.css */
+.App {
+  text-align: center;
+  min-height: 100vh;
+  background: #1a1a1a;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 10px;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.App-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background: white;
+  margin: 10px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  width: 80%;
+}
+
+.game-container {
+  background: #242424;
+  border-radius: 12px;
+  padding: 25px;
+  width: 95%;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 25px;
+  align-items: start;
+}
+
+.game-title {
+  grid-column: 1 / -1;
+  font-size: 2rem;
+  margin: 0 0 15px 0;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  padding-left: 10px;
+}
+
+.left-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 20px;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  padding: 5px;
+  min-height: 500px;
+}
+
+/* Controls Container */
+.controls-container {
+  background: #2a2a2a;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.bet-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.bet-input-group, .multiplier-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bet-input-group label, .multiplier-input-group label {
+  color: #888;
+  font-size: 0.9rem;
+  text-align: left;
+  font-weight: 500;
+}
+
+.bet-input, .multiplier-input {
+  background: #333;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 12px;
+  color: white;
+  font-size: 1.1rem;
+  width: 100%;
+}
+
+/* Top Wins Section */
+.top-wins-container {
+  background: #2a2a2a;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.top-wins-container h3 {
+  margin: 0 0 15px 0;
+  color: #ffd700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.top-wins-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.top-win-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #333;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.top-win-item .rank {
+  color: #888;
+  min-width: 25px;
+}
+
+.top-win-item .player {
+  color: #fff;
+  flex: 1;
+  text-align: left;
+  margin-left: 8px;
+}
+
+.top-win-item .amount {
+  color: #4CAF50;
+  margin: 0 8px;
+}
+
+.top-win-item .multiplier {
+  color: #33b5e5;
+  min-width: 45px;
+  text-align: right;
+}
+
+/* User Text Output Tile */
+.user-text-container {
+  background: #2a2a2a;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.user-text-container h3 {
+  margin: 0 0 15px 0;
+  color: #ffd700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.user-text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.status-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #333;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.status-label {
+  color: #888;
+}
+
+.status-value {
+  color: white;
+  font-weight: 500;
+}
+
+.status-value.win {
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.status-item.highlight {
+  background: #2c3e50;
+  border: 1px solid #3498db;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .game-container {
+    grid-template-columns: 250px 1fr;
+    padding: 20px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .game-container {
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 600px;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .game-title {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .left-sidebar {
+    order: 2;
+    position: static;
+  }
+
+  .game-board {
+    order: 1;
+    min-height: auto;
+  }
+
+  .bet-controls {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .bet-input-group, .multiplier-input-group {
+    flex: 1;
+    min-width: 140px;
+  }
+
+  .user-text-container {
+    padding: 15px;
+  }
+
+  .status-item {
+    padding: 8px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .game-container {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .game-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .controls-container, .top-wins-container {
+    padding: 15px;
+  }
+
+  .bet-input, .multiplier-input {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .top-win-item {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+
+  .user-text-container {
+    padding: 12px;
+  }
+
+  .user-text-container h3 {
+    font-size: 0.9rem;
+  }
+
+  .status-item {
+    padding: 6px;
+    font-size: 0.8rem;
+  }
+} 
